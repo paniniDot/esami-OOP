@@ -23,7 +23,7 @@ public class GUI {
         	}
         });
         this.btns.stream().forEach(btn -> btn.addActionListener(e -> updateButtons()));
-        JButton jbOK = new JButton("OK");
+        JButton jbOK = new JButton("Reset");
         jbOK.addActionListener(e -> resetButtons());
         JPanel jp = new JPanel();
         this.btns.stream().forEach(btn -> jp.add(btn));
