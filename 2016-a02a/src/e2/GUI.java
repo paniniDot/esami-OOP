@@ -16,9 +16,10 @@ public class GUI {
     	for(int i = 0; i < size; i++) {
         	this.btns.add(new JButton(i == 0 ? "*" : " "));
         	var button = this.btns.get(i);
-        	button.addActionListener(e -> { 
-        		button.setEnabled(false); 
-        		this.model.setDisabled(this.btns.indexOf(e.getSource()));
+        	button.addActionListener(e -> {  
+        		if(this.model.setDisabled(this.btns.indexOf(e.getSource()))) {
+        			button.setEnabled(false);
+        		}
         	});
         	jp.add(btns.get(i));
         } 

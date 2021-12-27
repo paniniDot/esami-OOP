@@ -16,10 +16,12 @@ public class ModelImpl implements Model {
 	}
 	
 	@Override
-	public void setDisabled(final int position) {
+	public boolean setDisabled(final int position) {
 		if(this.current != position) {
 			this.disabled.add(position);
+			return true;
 		}	
+		return false;
 	}
 	
 	private int delta() {

@@ -2,7 +2,7 @@ package e2;
 
 public interface Model {
 
-	void setDisabled(int position);
+	boolean setDisabled(int position);
 
 	void step();
 
