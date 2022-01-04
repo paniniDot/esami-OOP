@@ -42,7 +42,9 @@ public class GUI extends JFrame {
 		public void run() {
 			while (!stop) {
 			    this.model.updateCurrentPositions();
-			    SwingUtilities.invokeLater(() -> buttons.stream().forEach(btn -> btn.setText(this.model.getPositions().contains(buttons.indexOf(btn)) ? "*" : " ")));
+			    SwingUtilities.invokeLater(() -> buttons
+			    		.stream()
+			    		.forEach(btn -> btn.setText(this.model.getPositions().contains(buttons.indexOf(btn)) ? "*" : " ")));
 				try {
 					Thread.sleep(300);
 				} catch (Exception ex) {
