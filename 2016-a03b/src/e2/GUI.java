@@ -19,7 +19,7 @@ public class GUI extends JFrame {
 				.mapToObj(i -> new JButton(i == 0 ? "X" : " "))
 				.peek(jb -> jb.setEnabled(true))
 				.peek(this.buttons::add)
-				.peek(jb -> jb.addActionListener(e -> {jb.setEnabled(false); agent.disable(this.buttons.indexOf(jb)); }))
+				.peek(jb -> jb.addActionListener(e -> {jb.setEnabled(false); agent.disable(this.buttons.indexOf(jb));}))
 				.peek(jp::add)
 				.collect(Collectors.toList());
         JButton exit = new JButton("Exit");
