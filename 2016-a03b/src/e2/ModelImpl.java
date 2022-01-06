@@ -17,11 +17,9 @@ public class ModelImpl implements Model {
 	}
 	
 	private void checkDirection() {
-		if(this.toRight && this.currentPos+1 < this.size) {
-			this.toRight = true;
-		} else if(this.currentPos-1 >= 0) {
+		if(this.currentPos+1 >= this.size) {
 			this.toRight = false;
-		} else {
+		} else if(this.currentPos-1 < 0) {
 			this.toRight = true;
 		}
 	}
