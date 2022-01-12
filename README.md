@@ -1,6 +1,6 @@
 ## Preparazione per Esame OOP 
 Esami di **OOP** fatti da panini degli anni passati 
-# Come eseguire da linea di comando
+### Come eseguire da linea di comando
 1. Compilazione
 ``` 
 javac -d /bin -cp /src /src/packages/nomeFileMain.java
