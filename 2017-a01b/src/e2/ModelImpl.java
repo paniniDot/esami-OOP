@@ -22,8 +22,7 @@ public class ModelImpl implements Model {
 	
 	private boolean isMin(final int number) {
 		return number == this.numbers.stream()
-				.filter(opt -> opt.isPresent())
-				.map(opt -> opt.get())
+				.flatMap(Optional::stream)
 				.min(Integer::compareTo)
 				.get();
 	}
