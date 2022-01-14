@@ -10,6 +10,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class GUI {
 
@@ -30,14 +31,15 @@ public class GUI {
 			this.model.disableLine(this.buttons.indexOf(jb));
 			jb.setEnabled(false);
 		}));
+		final JScrollPane scroll = new JScrollPane(main);
 		final JPanel outer = new JPanel(new BorderLayout());
-		outer.add(main,BorderLayout.CENTER);
+		outer.add(scroll, BorderLayout.CENTER);
 		JButton close = new JButton("Close");
 		close.addActionListener(e -> {
 			this.model.writeFile();
 			System.exit(0);
 		});
-		outer.add(close,BorderLayout.SOUTH); // nell'esame il pulsante Close va messo però in basso, e possibilmente delle giuste dimensioni
+		outer.add(close, BorderLayout.SOUTH); // nell'esame il pulsante Close va messo però in basso, e possibilmente delle giuste dimensioni
 		gui.getContentPane().add(outer);
 		gui.setSize(600,300);
 		gui.setVisible(true);
