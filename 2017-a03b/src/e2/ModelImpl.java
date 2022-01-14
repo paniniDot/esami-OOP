@@ -41,5 +41,4 @@ public class ModelImpl implements Model {
 		return this.size;
 	}
 	
-	
 }
