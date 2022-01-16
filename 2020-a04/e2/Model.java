@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface Model {
 	
-	static enum Pawn {
+	static enum Piece {
 		KING("\u265A"), HORSE("\u265E"), PAWN("\u2659"); 
 		
 		private final String unicode;
 		
-		private Pawn(final String unicode) {
+		private Piece(final String unicode) {
 			this.unicode = unicode;
 		}
 		
@@ -19,9 +19,9 @@ public interface Model {
 		}
 	}
 	
-	Pair<Pawn, Pair<Integer, Integer>> getMyPawnStatus();
+	Pair<Piece, Pair<Integer, Integer>> getPlayerPosition();
 	
-	List<Pair<Integer, Integer>> getPawnsStatus();
+	List<Pair<Integer, Integer>> getPawnPositions();
 	
 	void move(int row, int col);
 	

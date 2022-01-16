@@ -2,7 +2,7 @@ package e2;
 
 import javax.swing.*;
 
-import e2.Model.Pawn;
+import e2.Model.Piece;
 
 import java.util.*;
 import java.awt.*;
@@ -45,11 +45,11 @@ public class GUI extends JFrame {
     private void updateView() {
     	for(int i=0; i<this.model.getLeftedPawns(); i++) {
     		for(var entry: this.cells.entrySet()) {
-    			if(entry.getValue().equals(this.model.getPawnsStatus().get(i))) {
-        			entry.getKey().setText(Pawn.PAWN.toString());
-        		} else if(entry.getValue().equals(this.model.getMyPawnStatus().getY())) {
-        			entry.getKey().setText(this.model.getMyPawnStatus().getX().toString());
-        		} else if(!this.model.getPawnsStatus().contains(entry.getValue()) && !this.model.getMyPawnStatus().getY().equals(entry.getValue())) {
+    			if(entry.getValue().equals(this.model.getPawnPositions().get(i))) {
+        			entry.getKey().setText(Piece.PAWN.toString());
+        		} else if(entry.getValue().equals(this.model.getPlayerPosition().getY())) {
+        			entry.getKey().setText(this.model.getPlayerPosition().getX().toString());
+        		} else if(!this.model.getPawnPositions().contains(entry.getValue()) && !this.model.getPlayerPosition().getY().equals(entry.getValue())) {
         			entry.getKey().setText(" ");
         		}
     		}
