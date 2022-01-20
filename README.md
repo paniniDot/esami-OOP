@@ -3,7 +3,7 @@ Esami di **OOP** fatti da panini degli anni passati
 ### Come eseguire da linea di comando
 1. Compilazione
 ``` 
-javac -d /bin -cp /src /src/packages/nomeFileMain.java
+javac -d /bin -cp /src /src/packages/NomeFileMain.java
 ```
 - *-d* indica al compilatore quale sarà la directory nella quale dovrà inserire il byte-code.
 N.B.: la struttura interna della directory /bin rifletterà la struttura dei package. 
